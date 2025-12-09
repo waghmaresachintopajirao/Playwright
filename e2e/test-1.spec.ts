@@ -10,5 +10,5 @@ test('test', async ({ page }) => {
   await expect(page.getByRole('navigation')).toContainText('Jobs');
   await page.getByRole('heading', { name: 'Find Jobs' }).click();
   await expect(page.getByRole('textbox', { name: 'Job title, keywords, skills,' })).toBeEmpty();
-
+  await page.close();
 });
